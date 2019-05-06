@@ -58,6 +58,9 @@
 - Visual Studio Code [1.x]
 - Git [2.x]
 
+#### References
+- [Basic Syntax](https://docs.microsoft.com/en-in/dotnet/csharp/language-reference/language-specification/introduction)
+
 # Week 02 SQL
 
 # Week 03 MVC
