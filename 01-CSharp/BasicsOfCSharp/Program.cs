@@ -32,7 +32,7 @@ namespace BasicsOfCSharp
            
            // Calling parameterized Constructor with default values
            Employee emp=new Employee("Felice","Sumargo","21321vhj");
-           emp._Salary=8563.23M;
+          // emp._Salary=8563.23M;
            Console.Write($"The Salary is {emp._Salary}");
         }
     }
