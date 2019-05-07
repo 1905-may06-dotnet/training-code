@@ -8,7 +8,7 @@
 - cd .. -> moves a level up
 - use arrow keys to see history of previously use commands
 - history -> gives a track of all commands you have used in the current session
-- cd ./ <tab> -> gives the auto-completion of the file/directory
+- cd ./ tab key -> gives the auto-completion of the file/directory
 - pwd -> print where directory
 - ls -> list all the files and directories
 - mkdir 'directory name' -> make directory
