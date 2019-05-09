@@ -65,12 +65,20 @@ namespace CollectionsDemo
             #endregion
 
             //2. Generic Collections
-            List<int> nums = new List<int>();
+            /*List<int> nums = new List<int>();
             nums.Add(45);
             Stack<string> st;
             Queue<string> qs;
             Dictionary<int, string> dt;
+*/
 
+            Employee obj = new Employee();
+            List<Employee> results=obj.GetEmployees();
+
+            foreach (var result in results)
+            {
+                Console.WriteLine($"{result.firstName} {result.lastName}");
+            }
         }
     }
 }
