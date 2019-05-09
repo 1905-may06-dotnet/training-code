@@ -8,8 +8,7 @@ namespace Client
         {
             IBankOfAmerica boa = new RevatureCompany();//Upcasting
             boa.CreditScore = 7.5M;
-            boa.Offer(boa.CreditScore);
-            
+            boa.Offer(boa.CreditScore);            
         }
     }
 }
