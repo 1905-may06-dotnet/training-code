@@ -10,7 +10,7 @@ namespace ExceptionsDemo
         {
             Console.WriteLine("my custom exception");
         }
-    }
+    } 
     class Program
     {
         static void Main(string[] args)
