@@ -15,19 +15,14 @@ namespace Restaurant.Domain
         List<Reviews> reviews = new List<Reviews>();
         public List<Restaurant> GetRestaurants()
         {
-            reviews.Add(rev1);
-            reviews.Add(rev2);
-            //code to add restaurants
-            restaurants = new List<Restaurant>() {
-                new Restaurant(){ rId=1, address=add1, name="Chipotle", reviews= reviews }
-            };
-            return restaurants;
+            //logic to get restarants
         }
     }
     public class RestaurantLogic
     {
         public List<Restaurant> GetBest()
         {
+            //Logic to get best rating restuarant
             RestaurantDb db = new RestaurantDb();
             var res = db.GetRestaurants();
             //LINQ
