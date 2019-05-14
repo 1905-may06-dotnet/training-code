@@ -62,6 +62,35 @@
 - [Basic Syntax](https://docs.microsoft.com/en-in/dotnet/csharp/language-reference/language-specification/introduction)
 
 # Week 02 SQL
+### BASIC
+- RDBMS (Normalization, Multiplicity)
+- DML (Select, Insert, Update, Delete)
+- DDL (Create, Alter, Drop, Truncate)
+- JOIN (Inner-Join, Left-Join, Right-Join, Full-Join, Cross-Join, Self-Join)
+- UNION (Union, Union-All, Intersect, Except)
+- Subquery (CTE, Using-From, Using-Where)
+- Aggregate (Average, Count, Sum)
+
+### INTERMEDIATE
+- View (Schema, Query)
+- Function (Parameter, Scalar, Tabular)
+- Stored Procedure (Variable, If-Else, Try-Catch, Throw, RaiseError, Print)
+- Trigger (For, After, Instead-Of, Insert, Update, Delete)
+- Transaction (Commit, Rollback, Savepoint)
+- Isolation (Read-Uncommitted, Read-Committed, Repeatable-Read, Serializable)
+
+### ADVANCED
+- ACID(Atomicity, Consistency, Isolation, Durability)
+- Design Patterns(Structural-Facade, Structural-Repository)
+- ADO.NET(Connected-Architecture, Disconnected-Architecture)
+- ORM(Database-First Approach)
+
+### _Tools_
+- Transact-SQL [2017]
+- Entity Framework Core [2.x]
+- SQL Server [2017]
+- Azure SQL Databases
+- SQL Server Mgmt Studio [2017]
 
 # Week 03 MVC
 
