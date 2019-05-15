@@ -46,3 +46,29 @@ Create table Location(
 alter table LOCATION Add
     Constraint PK_Location_Id PRIMARY KEY(Id),
     CONSTRAINT FK_Location_Restaurant FOREIGN KEY(RestaurantId) REFERENCES Restaurant(Id)
+
+create table Review(
+    Id Int IDENTITY,
+    Rating float check (Rating>=0 and Rating < = 5),
+    Comment VARCHAR(200),
+    RestaurantId int,
+    CONSTRAINT PK_Review_Id PRIMARY Key(ID),
+    CONSTRAINT FK_Review_Restaurant FOREIGN Key(RestaurantId) REFERENCES dbo.Restaurant(Id)
+)
+
+insert into Restaurant(Name) values ('Dominos')
+go
+insert into Restaurant values('Taco Bell')
+select Id, Name from restaurant
+
+--insert into location 
+insert into [Location]--(Address1,Address2,City,State,Country,Zipcode,RestaurantId) 
+    VALUES('11730','Plaza America Dr','Reston','VA','US','20190',1)
+go
+SELECT * from Location
+
+INSERT into Review(Rating, Comment, RestaurantId)
+    VALUES(4.2,'Good Place',1)
+
+select * from Review
+

@@ -1,0 +1,2 @@
+CMD: 
+dotnet ef dbcontext scaffold "Server=<server name>;Database=<Db Name>;user id=<username>;Password=<password>;" Microsoft.EntityFrameworkCore.SqlServer -o <Output Directory name> -c <context name>
