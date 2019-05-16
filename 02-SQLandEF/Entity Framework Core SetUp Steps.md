@@ -18,3 +18,6 @@
 - `dotnet ef -h` -See the EF help commands
 - `dotnet ef dbcontext scaffold -h` - see if help about EF Db Context Scaffold commands
 - `dotnet ef dbcontext scaffold -connection "Server=<server name>;Database=<Db Name>;user id=<username>;Password=<password>;" -provider Microsoft.EntityFrameworkCore.SqlServer -outputDir <Output Directory name> -context <context name>` - to get all Entities mapped from database objects to C# classes.
+
+
+[Reference](https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx)
