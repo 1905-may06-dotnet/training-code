@@ -5,6 +5,7 @@
 - `Install-Package Microsoft.EntityFrameworkCore.SqlServer`
 - `Install-Package Microsoft.EntityFrameworkCore.Tools`
 - `Install-Package Microsoft.EntityFrameworkCore.Design`
+- Build the project before Scaffolding
 - `Get-Help about_EntityFrameworkCore` - See the EF help commands
 - `Scaffold-DbContext -connection "Server=<DB Server Name>;Database=<DB Name>;user id=<username>;Password=<password>;" -provider Microsoft.EntityFrameworkCore.SqlServer -outputDir <Output Directory name> -context <context name>` - Its is mandatory to provide connectio string and the provider rest parameters are optional
 
