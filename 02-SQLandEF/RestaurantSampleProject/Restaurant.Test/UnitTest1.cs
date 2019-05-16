@@ -1,14 +1,23 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RestaurantData;
+using RestaurantData.Data;
 
 namespace Restaurant.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestCrud
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestGetRestaurantsById()
         {
-           //Some code
+            //Some code
+            //Arrange
+            ICrud c = new Crud();
+            string expectedRestaurant = "Taco Bell";
+            //Act
+            var actualRestaurant=c.GetRestaurants(2).Name;
+            //Assert
+            Assert.AreEqual(expectedRestaurant, actualRestaurant);
 
         }
     }

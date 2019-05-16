@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RestaurantData
 {
-    interface ICrud
+    public interface ICrud
     {
         List<Restaurant> GetRestaurants();
         Restaurant GetRestaurants(int id);
