@@ -12,7 +12,8 @@ select * from SalesLT.Customer
 select * from SalesLT.SalesOrderHeader
 -- (32 row(s) affected)
 
-SELECT c.CustomerID, soh.SalesOrderID
+--inner join
+SELECT c.CustomerID, soh.SalesOrderID, soh.SubTotal
 FROM SalesLT.Customer c JOIN SalesLT.SalesOrderHeader soh
 ON c.CustomerID = soh.CustomerID;
 -- (32 row(s) affected)
@@ -24,3 +25,10 @@ SELECT *
 FROM SalesLT.Customer c LEFT OUTER JOIN SalesLT.SalesOrderHeader soh
 ON c.CustomerID = soh.CustomerID;
 -- (847 row(s) affected)
+
+SELECT *
+FROM SalesLT.Customer c CROSS JOIN SalesLT.SalesOrderHeader soh
+ON c.CustomerID = soh.CustomerID;
+-- 27104 rows 
+
+select Unicode('A') as Value
