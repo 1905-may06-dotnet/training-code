@@ -10,7 +10,6 @@ namespace RestaurantData
         private static RestaurantContext instance = null;
         private DbInstance()
         {
-
         }
         public static RestaurantContext Instance { get {
                 if (instance ==null)

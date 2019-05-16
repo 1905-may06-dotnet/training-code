@@ -24,7 +24,7 @@ namespace RestaurantData.Data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=utadbServer.database.windows.net;Database=RestaurantDb;user id=pushpinder;Password=Password123;");
+                optionsBuilder.UseSqlServer(DbConnection.Str);
             }
         }
 

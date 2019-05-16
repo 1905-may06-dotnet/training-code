@@ -8,8 +8,7 @@ namespace RestaurantData
     public class Crud:ICrud
     {
        public List<Restaurant> GetRestaurants()
-        {
-            
+        {            
             // var restaurants=  from r in db.Restaurant
             //select r;
 
