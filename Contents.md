@@ -92,6 +92,31 @@
 - SQL Server Mgmt Studio [2017]
 
 # Week 03 MVC
+### BASIC
+- HTML Fundamentals
+- HTML5 new features
+- Multimedia (Audio, Canvas, Video)
+- Forms (Input, Validation)
+- CSS Fundamentals (Box-Model, Media-Queries, Positioning, Responsive-Design, Rulesets, Values-Color, Values-Size)
+- Selectors (Class, Id, Omni, Parent-Child, Ancestor-Descendant, Pseudo-Classes, Pseudo-Elements, Sibling, Tag)
+
+### INTERMEDIATE
+- MVC Concepts(Controller, Model, View)
+- Request Lifecycle (DNS, Response, Request)
+- Controller (Actions, HTTP Verbs)
+- Model (Data-Annotations, ViewModel)
+- View (Partial-Views, Strongly-Typed, Weakly-Typed)
+- Routing (Global, Controller, Action)
+
+### ADVANCED
+- Filters (Action, Authorization, Custom, Exception, Response)
+- Helpers (Custom, HTML, Tag)
+- Model Binding
+- ORM (Code-First Approach)
+
+### _Tools_
+- ASP.NET MVC Core [2.x]
+- Entity Framework Core [2.x]
 
 # Week 04 DevOps
 
