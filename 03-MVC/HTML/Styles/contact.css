@@ -1,0 +1,18 @@
+
+        h2{
+            background:rgb(255, 251, 0);
+            text-align:center;
+        }
+        .mandatory{
+            color:red;
+        }
+        .optional{
+            color:blue;
+        }
+        #query{
+            background-color: yellow;
+        }
+        /* Attribute selector */
+        input[type="number"]{
+            background:purple;
+        }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact US</title>
+    <link href="../Styles/contact.css" rel="stylesheet">
+    <style>
+        h2 {
+            background: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Contact Us Form</h2>
+    <form action="../Pages/Home.html" method="POST">
+        <legend>Mandatory
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="fname" class="mandatory">First Name</label><span>*</span>
+                        </td>
+                        <td>
+                            <input type="text" id="fname" name="fname" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lname" class="mandatory">
+                                Last Name
+                            </label><span>*</span>
+                        </td>
+                        <td>
+                            <input type="text" id="lname" name="lname" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email"  class="mandatory">Email</label><span>*</span>
+                        </td>
+                        <td>
+                            <input type="email" id="email" name="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="query"  class="mandatory">Query</label><span>*</span>
+                        </td>
+                        <td>
+                            <textarea rows="5" cols="15" id="query" name="query" required></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </legend>
+        <legend> Optional
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="phone"  class="optional">Phone</label>
+                        </td>
+                        <td>
+                            <input type="tel" id="phone" pattern="[0-9]{10}" name="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label  class="optional">Gender</label>
+                        </td>
+                        <td>
+                            <label for="male"  class="optional">Male</label>
+                            <input type="radio" id="male" value="male" name="gender" checked>
+                        </td>
+                        <td>
+                            <label for="female"  class="optional">Female</label>
+                            <input type="radio" id="female" name="gender" value=female>
+                        </td>
+                        <td>
+                            <label for="others"  class="optional">Others</label>
+                            <input type="radio" id="others" name="gender" value="others">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="age"  class="optional">Age</label>
+                        </td>
+                        <td>
+                            <input type="number" id="age" name="age" max="105" min="16">
+                        </td>
+                        <td>
+                            <label for="new"  class="optional">Subscribe for news</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" checked id="news" name="news">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </legend>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
