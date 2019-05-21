@@ -74,10 +74,9 @@
 ### INTERMEDIATE
 - View (Schema, Query)
 - Function (Parameter, Scalar, Tabular)
-- Stored Procedure (Variable, If-Else, Try-Catch, Throw, RaiseError, Print)
+- Stored Procedure 
 - Trigger (For, After, Instead-Of, Insert, Update, Delete)
 - Transaction (Commit, Rollback, Savepoint)
-- Isolation (Read-Uncommitted, Read-Committed, Repeatable-Read, Serializable)
 
 ### ADVANCED
 - ACID(Atomicity, Consistency, Isolation, Durability)
