@@ -24,7 +24,7 @@ This repository will be used for sharing code, projects and notes
 
   
 ### Useful Links
-* [Git Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+* [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
 * [Git Basics](https://youtu.be/0fKg7e37bQE)
 * [Git Team Basics](https://youtu.be/oFYyTZwMyAg)
 
