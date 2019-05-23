@@ -34,3 +34,10 @@
     - OutProcess : By default .Net CLI uses Kestrel server for hosting the app irrespective of ```<AspNetCoreHostingModel>InProcess/OutProcess</AspNetCoreHostingModel>```
         - Internal : Kestrel (cross-platform process)
         - External : IIS/NginX/Apache as reverse proxy server and Kestrel used in combination with.
+
+
+_References_
+- [Asp.Net Core Fundamentals](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/index?view=aspnetcore-2.2&tabs=windows)
+-  [Asp.Net Core MVC App](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-2.2)
+- [Data Access using EF Core with ASP.Net core MVC](https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.2)
+
