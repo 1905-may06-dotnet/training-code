@@ -10,15 +10,14 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "commandLineArgs": "MyOwnKey= My own value from Command Line Args",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "MyOwnKey": "My own value from launchSettings.json"
+        "MyOwnKey": "My own value from launchSettings.json",
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "HelloWorldMVC": {
-      "commandName": "Project",
+      "commandName": "Project", //Kestrel Server
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

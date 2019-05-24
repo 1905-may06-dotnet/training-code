@@ -1,0 +1,10 @@
+﻿@{ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var r = @ViewData["Rest"] as HelloWorldMVC.Models.Restaurant;
+
+}
+<h1>@r.Name</h1>
+<p>Rating : @r.Score</p>
+

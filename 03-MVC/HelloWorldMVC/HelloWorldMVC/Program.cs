@@ -15,6 +15,7 @@ namespace HelloWorldMVC
         //Start point of Application
         public static void Main(string[] args)
         {
+            //Console.WriteLine(args[0]);
             CreateWebHostBuilder(args).Build().Run();
             
         }
