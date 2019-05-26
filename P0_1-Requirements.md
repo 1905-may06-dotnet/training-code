@@ -1,13 +1,14 @@
 # Project - pizzabox
 - This is going to be the individual project. 
-## architecture
+## [architecture](https://docs.microsoft.com/en-us/dotnet/standard/modern-web-apps-azure-architecture/common-web-application-architectures)
 ### [solution] PizzaBox.sln
   - [project] PizzaBox.Client.csproj
     - [folder] ViewModels
   - [project] PizzaBox.Data.csproj
     - [folder] Entities
   - [project] PizzaBox.Domain.csproj
-    - [folder] Models
+    - _The Application *Domain* holds the business model, which includes entities, services, and interfaces. These interfaces include abstractions for operations that will be performed using *Data*, such as data access, file system access, network calls, etc. Sometimes services or interfaces defined at this layer will need to work with non-entity types that have no dependencies on UI/PL or Data. These can be defined as mappers or simple Data Transfer Objects (DTOs)_
+    - [folder] Models - Entities (business model classes that are persisted)    
   - [project] PizzaBox.Testing.csproj
     - [folder] UnitTests
 ## requirements
