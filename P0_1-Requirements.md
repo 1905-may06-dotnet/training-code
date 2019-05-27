@@ -4,7 +4,12 @@
 ### [solution] PizzaBox.sln
   - [project] PizzaBox.Client.csproj
     - [folder] ViewModels
+    - [folder] Controllers
+    - [folder] Filters
+    - [folder] Views
   - [project] PizzaBox.Data.csproj
+    - _EF Core types (DbContext, Migration)_
+    - _Data access implementation types (Repositories)_
     - [folder] Entities
   - [project] PizzaBox.Domain.csproj
     - _The Application *Domain* holds the business model, which includes entities, services, and interfaces. These interfaces include abstractions for operations that will be performed using *Data*, such as data access, file system access, network calls, etc. Sometimes services or interfaces defined at this layer will need to work with non-entity types that have no dependencies on UI/PL or Data. These can be defined as mappers or simple Data Transfer Objects (DTOs)_
