@@ -3,6 +3,7 @@
 ## [architecture](https://docs.microsoft.com/en-us/dotnet/standard/modern-web-apps-azure-architecture/common-web-application-architectures)
 ### [solution] PizzaBox.sln
   - [project] PizzaBox.Client.csproj
+  -  _The user interface layer in an ASP.NET Core MVC application is the entry point for the application. This project should reference the Application *Domain* project, and its types should interact with *Data layer* strictly through interfaces defined in Application Domain. No direct instantiation of or static calls to the Data layer types should be allowed in the UI layer_
     - [folder] ViewModels
     - [folder] Controllers
     - [folder] Filters
