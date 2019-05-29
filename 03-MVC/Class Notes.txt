@@ -1,0 +1,51 @@
+ASP.NET Core MVC Fundamentals
+
+Servers Compatible with Asp.Net MVC 
+	- IIS - Windows based Server
+	- IIS Express -VS2019 - development server -> Windows OS
+	- Kestrel Server -> Platform independant Server -> mac OS, windows, Apache
+	- Nginx, Apache
+
+Hosting Models
+- InProcess: IIS Express -> iisexpress.exe -> High Throughput
+- OutOfProcess: 
+	Internal - Kestrel Server -> dotnet.exe
+	External - reverse proxy server (IIS -> w3wp.exe, Apache, Nginx) -> Kestrel Server -> dotnet.exe
+
+Environment of Applications:
+Eg: application domain -> http://abc.com
+
+1. Development web server ->http://abc-dev.com
+2. QA -> http://abc-qa.com
+3. Staging -> http://abc-staging.com
+4. UAT -> http://abc-uat.com
+5. Production -> http://abc.com
+
+appSettings.json: used to maintain configuration (key value pairs)
+
+
+Middlewares in Asp.Net -> Softwares to process requests,
+	Authentication
+	Logging
+	Static files
+	MVC
+	Exception
+
+
+Asp.Net core middleware looks for Environment Variables in this order: 
+	1. appSettings.json
+	2. appSetting.{Envirinment}.json
+	3. User Secrets
+	4. launchSettings.json
+	5. command line arguments
+
+Controller: class that handles the request
+	Action Methods: which handles the request further to process in appropriate
+	Action Results : IActionResult
+Model : classes which handles the data and logic to manage data
+View: Pages to be displayed to the user
+
+
+ROUTING:
+UseMvcDefaultRoute() -> {controller=Home}/{action=Index}/{id?}
+UseMvc() ->Customized routes, Attribute Routing

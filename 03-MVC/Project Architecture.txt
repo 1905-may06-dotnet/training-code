@@ -1,0 +1,16 @@
+DataProject: Class Lib
+	EF Core -> [DB First/ Code First] 
+		-> Entities
+		-> DbContext
+		-> Implement the repository Interface
+		-> mapper
+
+DomainProject : Class Lib
+This deals with Business logic or also known as Business Logic Layer
+	->Logic related classes (Calculate cost)
+	->Interface for repository design pattern (All the declaration which are required to perform Data related 
+			Operations. Eg: Create, Update, Delete, Read)
+	-> Entities related to Domain which are used to exchange values between client and data layer
+	
+UnitTest project : MSTest/xUnit/NUnit
+	here test most of of the domain related methods.

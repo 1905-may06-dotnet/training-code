@@ -28,8 +28,8 @@ namespace HelloWorldMVC.Controllers
             return View("Index1");
         }
         [HttpGet]
-        [Route("Home/index/{id}")]
-        public string Index(int? id)
+        //  [Route("Home/index/{id}")]
+        public string Index(int id)
         {
             return id.ToString();
         }
