@@ -15,7 +15,7 @@ namespace Web.Controllers
         {
             this.db = db;
         }
-        Models.Contact c = new Models.Contact();
+        Models.Contact c;
         List<Models.Contact> contactList = new List<Models.Contact>();
         // GET: Contact
         public ActionResult Index()
@@ -23,23 +23,34 @@ namespace Web.Controllers
             var contacts=db.GetContacts();
             foreach (var contact in contacts)
             {
+                c = new Models.Contact();
                 c.Name = contact.GetName(contact.FirstName, contact.MiddleName, contact.LastName);
                 c.Mobile = contact.Mobile;
                 c.HomePhone = contact.HomePhone;
                 c.Num++;
                 c.Email = contact.Email;
+                c.Id = contact.Id;
                 contactList.Add(c);
             }
+            
             return View(contactList);
         }
 
         // GET: Contact/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var contact=db.GetContactById(id);
+            c = new Models.Contact();
+            c.Id = contact.Id;
+            c.Name = contact.GetName(contact.FirstName, contact.MiddleName, contact.LastName);
+            c.Mobile = contact.Mobile;
+            c.HomePhone = contact.HomePhone;
+            c.WorkPhone = contact.WorkPhone;
+            c.Email = contact.Email;
+            return View(c);
         }
-
         // GET: Contact/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -48,12 +59,21 @@ namespace Web.Controllers
         // POST: Contact/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(IFormCollection collection,Models.Contact contact)
         {
+            Domain.Contact dmc = new Contact();
+            dmc.FirstName = contact.FirstName;
+            dmc.MiddleName = contact.MiddleName;
+            dmc.LastName = contact.LastName;
+            dmc.Mobile = contact.Mobile;
+            dmc.WorkPhone = contact.WorkPhone;
+            dmc.HomePhone = contact.HomePhone;
+            dmc.Email = contact.Email;
+
             try
             {
-                // TODO: Add insert logic here
-
+                db.Add(dmc);
+                db.Save();
                 return RedirectToAction(nameof(Index));
             }
             catch

@@ -37,6 +37,7 @@ namespace Web
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            
             // Initialize the DbContext Connection string here
             services.AddDbContext<ContactDbContext>(optionsAction =>
             optionsAction.UseSqlServer(Configuration.GetConnectionString("ContextDb")));
@@ -68,7 +69,7 @@ namespace Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "/App/{controller=Contact}/{action=Index}/{id?}");
             });
         }
     }

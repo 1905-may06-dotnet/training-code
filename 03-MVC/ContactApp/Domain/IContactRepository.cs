@@ -10,6 +10,7 @@ namespace Domain
         void DeleteContact(int Id);
         IEnumerable<Contact> GetContacts();
         Contact GetContactByName(string name);
+        Contact GetContactById(int id);
         void Save();
     }
 }

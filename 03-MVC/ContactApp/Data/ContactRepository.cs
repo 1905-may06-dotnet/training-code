@@ -50,6 +50,12 @@ namespace Data
                 return null;
         }
 
+        public Domain.Contact GetContactById(int id)
+        {
+            var contact = _db.Contact.Where(x => x.Id == id).FirstOrDefault();
+            return Mapper.Map(contact);
+        }
+
         public IEnumerable<Domain.Contact> GetContacts()
         {
             // throw new NotImplementedException();
