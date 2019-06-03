@@ -104,7 +104,6 @@ namespace Web.Controllers
                 return View();
             }
         }
-
         // GET: Contact/Delete/5
         public ActionResult Delete(int id)
         {
@@ -119,9 +118,8 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add delete logic here
-
                 return RedirectToAction(nameof(Index));
-            }
+            }   
             catch
             {
                 return View();
