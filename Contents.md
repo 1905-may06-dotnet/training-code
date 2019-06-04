@@ -122,8 +122,8 @@
 ### BASIC
 - Software Development Lifecycle
 (Waterfall, V-Model, Agile)
-- Source Control Management
-(Branch, DVCS-Git, Merge, Pull-Request)
+- Source Control Management 
+(Branch, DVCS-[Git](https://www.atlassian.com/git/tutorials/what-is-version-control), Merge, Pull-Request)
 - DevOps
 (CI/CD, Pipeline, Build-Definition, Code-Analysis, Release-Definition)
 
