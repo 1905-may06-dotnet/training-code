@@ -119,6 +119,32 @@
 - Entity Framework Core [2.x]
 
 # Week 04 DevOps
+### BASIC
+- Software Development Lifecycle
+(Waterfall, V-Model, Agile)
+- Source Control Management
+(Branch, DVCS-Git, Merge, Pull-Request)
+- DevOps
+(CI/CD, Pipeline, Build-Definition, Code-Analysis, Release-Definition)
+
+### INTERMEDIATE
+- Cloud Computing
+(Hybrid, Private, Public, IaaS, PaaS, SaaS, CaaS)
+- Docker Fundamentals
+(Definition, Image, Container, Registry, Machine, Orchestration)
+- Configuration and Compose Files
+
+### ADVANCED
+- Analysis
+(Code-Coverage, Code-Review, Technical-Debt)
+- Testing
+(Unit-Testing, Test-Runner)
+### _Tools_
+- Azure
+- Azure DevOps
+- SonarCloud
+- Docker [18.x]
+- Git [2.x]
 
 # Week 05 Web Services
 
