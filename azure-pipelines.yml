@@ -21,5 +21,12 @@ steps:
   workingDirectory: $(pathtosolution)
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'build'
+    command: 'publish'
     projects: '$(pathtoproject)/*.csproj'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Enterprise with MSDN(581982a8-2cbb-485e-b313-4da4b27d42f1)'
+    appType: 'webApp'
+    WebAppName: 'contactapputa'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/$(pathtoproject)/**/*.zip'
