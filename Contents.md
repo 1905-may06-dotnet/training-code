@@ -120,12 +120,12 @@
 
 # Week 04 DevOps
 ### BASIC
-- Software Development Lifecycle
+- [Software Development Lifecycle](https://www.tutorialspoint.com/sdlc/)
 (Waterfall, V-Model, Agile)
 - Source Control Management 
 (Branch, DVCS-[Git](https://www.atlassian.com/git/tutorials/what-is-version-control), Merge, Pull-Request)
-- DevOps
-(CI/CD, Pipeline, Build-Definition, Code-Analysis, Release-Definition)
+- [DevOps](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-devops)
+(CI/CD, [Azure DevOps Pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core?view=azure-devops), Build-Definition, Code-Analysis, Release-Definition)
 
 ### INTERMEDIATE
 - Cloud Computing
