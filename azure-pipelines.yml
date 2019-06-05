@@ -12,7 +12,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   pathtosolution: '03-MVC/ContactApp/'
-  pathtoproject: 'ContactApp/Web'
+  pathtoproject: '03-MVC/ContactApp/Web'
 
 steps:
 # - script: hello world!
