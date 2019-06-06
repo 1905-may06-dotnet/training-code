@@ -44,12 +44,6 @@ steps:
   workingDirectory: $(pathtosolution)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- task: SonarCloudAnalyze@1
-
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
-
 # BASIC TEST
 - script: dotnet test
    --configuration $(buildConfiguration)
@@ -61,6 +55,12 @@ steps:
     /p:CoverletOutput='$(Build.ArtifactStagingDirectory)/coverage/'
   workingDirectory: $(pathtosolution)
   displayName: 'dotnet Test'
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 
 # 1. hello world message to check the server is live(check heartbeat)
 # - script: hello world!
