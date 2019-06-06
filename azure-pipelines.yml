@@ -35,7 +35,7 @@ steps:
     projectKey: '1905-may06-dotnet_training-code'
     projectName: 'ContactApp'
     extraProperties: 
-      sonar.cs.opencover.reportsPaths="$(Build.ArtifactStagingDirectory)/coverage"
+      sonar.cs.opencover.reportsPaths="$(Build.ArtifactStagingDirectory)/coverage/*"
       sonar.cs.vstest.reportsPaths="$(Build.ArtifactStagingDirectory)/test/*.trx"
   displayName: 'Sonar Prepare Analysis'
 
@@ -59,8 +59,6 @@ steps:
     /p:CollectCoverage=true
   workingDirectory: $(pathtosolution)
   displayName: 'dotnet Test'
-
-
 
 # 1. hello world message to check the server is live(check heartbeat)
 # - script: hello world!
