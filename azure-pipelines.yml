@@ -34,9 +34,9 @@ steps:
 - script: dotnet test
    --configuration $(buildConfiguration)
    --no-build
+    /p:CollectCoverage=true
   workingDirectory: $(pathtosolution)
   displayName: 'dotnet Test'
-
 
 
 
