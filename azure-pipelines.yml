@@ -3,30 +3,54 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
+# trigger is the branch this pipeline will be pointing to
 trigger:
 - master
+# - dev
+# - staging
 
-pool:
-  vmImage: 'ubuntu-latest'
+# 
+# pool:
+#   vmImage: 'ubuntu-latest'
+
+#Configured Build Server from Nick's VM. By default the Default points to empty server, so use Microsoft hosted Agents
+pool: Default
 
 variables:
   buildConfiguration: 'Release'
   pathtosolution: '03-MVC/ContactApp/'
   pathtoproject: '03-MVC/ContactApp/Web'
+  pathtotest: '03-MVC/ContactApp/Test'
 
 steps:
-# - script: hello world!
+# BUILD:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   workingDirectory: $(pathtosolution)
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'publish'
-    projects: '$(pathtoproject)/*.csproj'
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Visual Studio Enterprise with MSDN(581982a8-2cbb-485e-b313-4da4b27d42f1)'
-    appType: 'webApp'
-    WebAppName: 'contactapputa'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/$(pathtoproject)/**/*.zip'
+
+
+
+# 1. hello world message to check the server is live(check heartbeat)
+# - script: hello world!
+
+# 2. Make a dotnet build-> Ctrl+shift+B
+# - script: dotnet build --configuration $(buildConfiguration)
+#   displayName: 'dotnet build $(buildConfiguration)'
+#   workingDirectory: $(pathtosolution)
+
+# 3. dotnet publish -> to package the binaries in a folder
+# - task: DotNetCoreCLI@2
+#   inputs:
+#     command: 'publish'
+#     projects: '$(pathtoproject)/*.csproj'
+
+# 4. task to deploy app on the azure server
+# - task: AzureRmWebAppDeployment@4
+#   inputs:
+#     ConnectionType: 'AzureRM'
+#     azureSubscription: 'Visual Studio Enterprise with MSDN(581982a8-2cbb-485e-b313-4da4b27d42f1)'
+#     appType: 'webApp'
+#     WebAppName: 'contactapputa'
+#     packageForLinux: '$(System.DefaultWorkingDirectory)/$(pathtoproject)/**/*.zip'
+
+
