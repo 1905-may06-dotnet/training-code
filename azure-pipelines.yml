@@ -30,7 +30,13 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   workingDirectory: $(pathtosolution)
   displayName: 'dotnet build $(buildConfiguration)'
-  
+# BASIC TEST
+- script: dotnet test
+   --configuration $(buildConfiguration)
+   --no-build
+  workingDirectory: :$(pathtosolution)
+  displayName: 'dotnet Test'
+
 
 
 
