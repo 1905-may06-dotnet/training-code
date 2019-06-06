@@ -34,7 +34,7 @@ steps:
 - script: dotnet test
    --configuration $(buildConfiguration)
    --no-build
-  workingDirectory: :$(pathtosolution)
+  workingDirectory: $(pathtosolution)
   displayName: 'dotnet Test'
 
 
