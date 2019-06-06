@@ -34,11 +34,11 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'ContactAppUta'
     projectName: 'ContactAppUta'
-    extraProperties: 
-      sonar.cs.opencover.reportsPaths="$(Build.ArtifactStagingDirectory)/coverage/*"
-      sonar.cs.vstest.reportsPaths="$(Build.ArtifactStagingDirectory)/test/*.trx"
+    # extraProperties: 
+    #   sonar.cs.opencover.reportsPaths="$(Build.ArtifactStagingDirectory)/coverage/*"
+    #   sonar.cs.vstest.reportsPaths="$(Build.ArtifactStagingDirectory)/test/*.trx"
   displayName: 'Sonar Prepare Analysis'
-  
+
 # BUILD:
 - script: dotnet build --configuration $(buildConfiguration)
   workingDirectory: $(pathtosolution)
