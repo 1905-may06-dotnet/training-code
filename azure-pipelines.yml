@@ -32,13 +32,13 @@ steps:
     SonarCloud: 'ContactAppSonarCloud'
     organization: '1905-may06-dotnet'
     scannerMode: 'MSBuild'
-    projectKey: '1905-may06-dotnet_training-code'
-    projectName: 'ContactApp'
+    projectKey: 'ContactAppUta'
+    projectName: 'ContactAppUta'
     extraProperties: 
       sonar.cs.opencover.reportsPaths="$(Build.ArtifactStagingDirectory)/coverage/*"
       sonar.cs.vstest.reportsPaths="$(Build.ArtifactStagingDirectory)/test/*.trx"
   displayName: 'Sonar Prepare Analysis'
-
+  
 # BUILD:
 - script: dotnet build --configuration $(buildConfiguration)
   workingDirectory: $(pathtosolution)
