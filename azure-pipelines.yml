@@ -6,6 +6,10 @@
 # trigger is the branch this pipeline will be pointing to
 trigger:
 - master
+
+#Configured Build Server from Nick's VM. By default the Default points to empty server, so use Microsoft hosted Agents
+pool : Default
+
 # - dev
 # - staging
 
@@ -13,8 +17,7 @@ trigger:
 # pool:
 #   vmImage: 'ubuntu-latest'
 
-#Configured Build Server from Nick's VM. By default the Default points to empty server, so use Microsoft hosted Agents
-pool: Default
+
 
 variables:
   buildConfiguration: 'Release'
@@ -25,8 +28,9 @@ variables:
 steps:
 # BUILD:
 - script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
   workingDirectory: $(pathtosolution)
+  displayName: 'dotnet build $(buildConfiguration)'
+  
 
 
 
