@@ -18,9 +18,11 @@ RUN dotnet restore
 # into the image at the current dir (/app inside the image)
 COPY . ./
 
-RUN dotnet build --no-restore -c Release
+ARG config=Release
 
-RUN dotnet publish --no-build -c Release -o out
+RUN dotnet build --no-restore -c $config
+
+RUN dotnet publish --no-build -c $config -o out
 
 # if this werent the sdk it would work
 # run on port 80, not SDK default of port 5000.
@@ -37,4 +39,10 @@ WORKDIR /app
 
 COPY --from=build /app/out ./
 
-CMD [ "dotnet", "MyMvcTwo.dll" ]
+# really when a new container is starting it is not "dotnet MyMvcTwo.dll"
+# because CMD is really just the arguments to ENTRYPOINT.
+
+# default ENTRYPOINT is sh, so...
+# the actual first command is something like "sh -c 'dotnet MyMvcTwo.dll'"
+
+ENTRYPOINT [ "dotnet", "MyMvcTwo.dll" ]
