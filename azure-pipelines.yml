@@ -69,6 +69,23 @@ steps:
     searchFolder: '$(Build.ArtifactStagingDirectory)/test'
   displayName: 'Publish test results '
 
+# PUBLISH THE BUILD FILES
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    projects: $(pathtoproject)/*.csproj
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    publishWebProjects: false
+  displayName: 'dotnet publish'
+
+# PUBLISH BUILD ARTIFACTS
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+  displayName: 'Publish build artifacts'
+
 # 1. hello world message to check the server is live(check heartbeat)
 # - script: hello world!
 
