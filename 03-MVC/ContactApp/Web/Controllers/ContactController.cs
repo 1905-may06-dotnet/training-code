@@ -15,12 +15,11 @@ namespace Web.Controllers
         {
             this.db = db;
         }
-        
-       readonly List<Models.Contact> contactList = new List<Models.Contact>();
+        Models.Contact c;
+        readonly List<Models.Contact> contactList = new List<Models.Contact>();
         // GET: Contact
         public ActionResult Index()
-        {
-            Models.Contact c;
+        {   
             var contacts=db.GetContacts();
             foreach (var contact in contacts)
             {
