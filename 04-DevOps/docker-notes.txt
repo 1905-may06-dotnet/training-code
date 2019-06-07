@@ -1,0 +1,81 @@
+if we all had windows 10 professional, or linux, we could install real docker.
+but non-pro windows 10 doesn't support containers (yet?) so, we have Docker Toolbox.
+
+Docker Toolbox is meant to be one-click setup for running Linux containers on Windows using a small Linux virtual machine.
+
+https://docs.docker.com/engine/reference/commandline/docker/
+
+docker run <image-name>
+    this starts a new container from the given image (pulling that image if necessary)
+docker run --rm <image-name>
+    run container, and clean it up as soon as it has stopped
+docker run -d <image-name>
+    detach container from current terminal (run in background)
+docker run -it <image-name>
+    attach both input and output of current terminal to container
+        (needed for running shell like /bin/bash)
+    if we want Ctrl+C to stop the container, we need this
+docker run -p <port>:<port>
+    map a port outside the container to a port inside the container.
+    necessary to allow any networking inbound to the container.
+docker pull <image-name>
+    just downloads the image (or updates, if there's some new version)
+docker build <dir>
+    <dir> should be the directory with the Dockerfile.
+    usually we cd to that directory beforehand anyway, so <dir> is "."
+    use "-t <image+tag>" to tag the image like "ConsoleApp:1.0".
+    with "-f" we can manually specify a Dockerfile; needed if it's not named
+    "Dockerfile" (e.g. there's more than one for different needs)
+docker container ls
+    show all running containers
+docker container ls -a
+    show all running/stopped containers
+docker stop <container-id>
+    stop running container
+docker rm <container-id>
+    clean up stopped container
+docker rm -f <container-id>
+    stop and clean up container
+docker images ls
+    show all images downloaded
+docker logs <container-id>
+    look at console output of a container
+docker exec <container-id> <command>
+    run an additional command inside running container
+        (e.g. bash, ls) to look around/debug
+docker volume <...>
+    commands for managing volumes
+    volumes are like "shared folders" in VMs,
+    a way for the container to access certain files or folders outside
+        Docker while running (e.g.: a database that should survive the
+        container stopping).
+
+docker image:
+    template for container to start
+    has the whole file system
+    has a pointer to some program inside the image that should run
+        when we start the container
+    images are LAYERED - every image has some base image, adding
+        new layers on top of it
+
+https://docs.docker.com/engine/reference/builder/
+Dockerfile:
+    provides instructions to build a new image from some base image.
+    FROM:
+        sets the base image to use for subsequent layers
+    RUN
+    CMD
+    ENTRYPOINT
+    EXPOSE
+    ENV
+    COPY
+    WORKDIR
+    ARG
+
+when we do a docker build:
+
+1. the entire directory contents (the "build context") is sent to the docker daemon.
+2. then, we run each command in the dockerfile.
+3. any COPY commands use that build context for the source.
+
+we can use .dockerignore to hide files from that step 1.
