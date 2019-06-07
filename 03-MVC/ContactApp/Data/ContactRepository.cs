@@ -16,20 +16,10 @@ namespace Data
         public void Add(Domain.Contact contact)
         {
             _db.Contact.Add(Mapper.Map(contact));
-
         }
 
         public void DeleteContact(int Id)
         {
-            //Kevin's code
-            /*var contact = _db.Contact.Where(a => a.Id == Id).FirstOrDefault();
-            if(contact)
-                _db.Contact.Remove(contact);*/
-            //John
-            //var element = _db.Contact.Where(a => a.Id == Id).FirstOrDefault();
-
-            //if ( element != null ) _db.Contact.Remove(element);
-            //Carlos
             _db.Contact.Remove(_db.Contact.Find(Id));
         }
 
@@ -41,7 +31,6 @@ namespace Data
 
         public Domain.Contact GetContactByName(string name)
         {
-            //throw new NotImplementedException();
             var element = _db.Contact.Where(a => a.FirstName.Contains(name) || a.LastName.Contains(name)).FirstOrDefault();
 
             if (element != null)
@@ -58,14 +47,11 @@ namespace Data
 
         public IEnumerable<Domain.Contact> GetContacts()
         {
-            // throw new NotImplementedException();
-            //var x = _db.Contact;
             return _db.Contact.Select(x => Mapper.Map(x)); 
         }
 
         public void Save()
         {
-            //throw new NotImplementedException();
             _db.SaveChanges();
         }
     }

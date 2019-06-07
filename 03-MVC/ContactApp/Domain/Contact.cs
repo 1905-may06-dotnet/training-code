@@ -51,6 +51,13 @@ namespace Domain
                 mobile = value;
             }
         }
+        /// <summary>
+        /// This method is used to get full name of the user
+        /// </summary>
+        /// <param name="fName"></param>
+        /// <param name="mName"></param>
+        /// <param name="lName"></param>
+        /// <returns></returns>
 
         public string GetName(string fName, string mName, string lName)
         {

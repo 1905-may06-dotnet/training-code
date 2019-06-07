@@ -1,0 +1,159 @@
+{
+  "Domain.dll": {
+    "C:\\Revature\\training-code\\03-MVC\\ContactApp\\Domain\\Contact.cs": {
+      "Domain.Contact": {
+        "System.Int32 Domain.Contact::get_Id()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Domain.Contact::get_Created()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Contact::get_MiddleName()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Contact::get_WorkPhone()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Contact::get_HomePhone()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Contact::get_Email()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Domain.Contact::get_Modified()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Contact::get_FirstName()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Contact::set_FirstName(System.String)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 9,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String Domain.Contact::get_LastName()": {
+          "Lines": {
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Contact::set_LastName(System.String)": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 9,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String Domain.Contact::get_Mobile()": {
+          "Lines": {
+            "46": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Contact::set_Mobile(System.String)": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 9,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String Domain.Contact::GetName(System.String,System.String,System.String)": {
+          "Lines": {
+            "56": 1,
+            "57": 1,
+            "58": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

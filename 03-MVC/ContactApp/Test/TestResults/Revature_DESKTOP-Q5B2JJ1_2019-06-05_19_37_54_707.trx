@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="77423c14-2aef-4c83-a3e6-1e1d7c816e01" name="Revature@DESKTOP-Q5B2JJ1 2019-06-05 19:37:54:707" runUser="DESKTOP-Q5B2JJ1\Revature" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2019-06-05T19:37:54.7164549-05:00" queuing="2019-06-05T19:37:54.7164549-05:00" start="2019-06-05T19:37:53.7086429-05:00" finish="2019-06-05T19:37:54.7270340-05:00" />
+  <TestSettings name="default" id="640240e1-45b4-4873-a18a-80c48c655eba">
+    <Deployment runDeploymentRoot="Revature_DESKTOP-Q5B2JJ1_2019-06-05_19_37_54_707" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="fbbf12d4-15ed-405c-9e0e-4e83ebcb57eb" testId="7e5780bb-9d90-2879-efbf-aeb491253ed4" testName="TestGetName" computerName="DESKTOP-Q5B2JJ1" duration="00:00:00.0076686" startTime="2019-06-05T19:37:54.4664923-05:00" endTime="2019-06-05T19:37:54.5195412-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fbbf12d4-15ed-405c-9e0e-4e83ebcb57eb" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="TestGetName" storage="c:\revature\training-code\03-mvc\contactapp\test\bin\debug\netcoreapp2.2\test.dll" id="7e5780bb-9d90-2879-efbf-aeb491253ed4">
+      <Execution id="fbbf12d4-15ed-405c-9e0e-4e83ebcb57eb" />
+      <TestMethod codeBase="C:\Revature\training-code\03-MVC\ContactApp\Test\bin\Debug\netcoreapp2.2\Test.dll" adapterTypeName="executor://mstestadapter/v2" className="Test.TestContact" name="TestGetName" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="7e5780bb-9d90-2879-efbf-aeb491253ed4" executionId="fbbf12d4-15ed-405c-9e0e-4e83ebcb57eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

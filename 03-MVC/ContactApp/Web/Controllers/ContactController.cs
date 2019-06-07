@@ -15,11 +15,12 @@ namespace Web.Controllers
         {
             this.db = db;
         }
-        Models.Contact c;
-        List<Models.Contact> contactList = new List<Models.Contact>();
+        
+       readonly List<Models.Contact> contactList = new List<Models.Contact>();
         // GET: Contact
         public ActionResult Index()
-        {   
+        {
+            Models.Contact c;
             var contacts=db.GetContacts();
             foreach (var contact in contacts)
             {
@@ -95,8 +96,6 @@ namespace Web.Controllers
         {
             try
             {
-                // TODO: Add update logic here
-
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -117,7 +116,6 @@ namespace Web.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
                 return RedirectToAction(nameof(Index));
             }   
             catch
