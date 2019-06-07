@@ -1,0 +1,2 @@
+# manual dotnet publish -o out
+/out/
