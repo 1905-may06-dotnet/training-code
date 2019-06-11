@@ -3,22 +3,21 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-# trigger is the branch this pipeline will be pointing to
+# trigger is the branch this pipeline will be pointing to. Currently the trigger is pointing to master branch, same way we can trigger for other branches (one at a time or multiple branches in a pipeline)
 trigger:
 - master
-
-#Configured Build Server from Nick's VM. By default the Default points to empty server, so use Microsoft hosted Agents
-pool : Default
-
 # - dev
 # - staging
 
-# 
+# Pools are used to run jobs
+#Configured Build Server from Nick's VM. By default the Default points to empty server, so use Microsoft hosted Agents
+pool : Default
+
+# Another way of creating pool 
 # pool:
 #   vmImage: 'ubuntu-latest'
 
-
-
+# Variables : Variables give you a convenient way to get key bits of data into various parts of the pipeline. As the name suggests, the value of a variable may change from run to run or job to job of your pipeline. 
 variables:
   buildConfiguration: 'Release'
   pathtosolution: '03-MVC/ContactApp/'
@@ -77,7 +76,8 @@ steps:
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     publishWebProjects: false
   displayName: 'dotnet publish'
-
+  
+# Artifacts store build outputs and intermediate files between build steps
 # PUBLISH BUILD ARTIFACTS
 - task: PublishBuildArtifacts@1
   inputs:
