@@ -147,6 +147,33 @@
 - Git [2.x]
 
 # Week 05 Web Services
+    - [Service Oriented Architecture](https://www.guru99.com/soa-principles.html)
+    (Patterns, Principles, Endpoint, Address, Binding, Contract)
+    - [SOAP](https://www.tutorialspoint.com/soap/what_is_soap.htm)
+    (Envelope, Header, Body)
+    - [WCF](https://docs.microsoft.com/en-us/dotnet/framework/wcf/fundamental-concepts)
+    - [WSDL](https://www.tutorialspoint.com/wsdl/wsdl_introduction.htm)
+    (Port, Binding, PortType, Operation)
+    - [REST Fundamentals](https://restfulapi.net/rest-architectural-constraints/)
+    (Uniform-Interface, Client-Server, Stateless, Cacheable, Layered, Code-On-Demand)
+    - [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+    (Method, Safe, Idempotent, Status-Code, Header-Request, Header-Response)
+    - REST Server
+    (CORS, XSS, CSRF)
+    - Media Type
+    (JSON, Content-Negotiation, Action-Result Types, Formatter)
+    - REST Client
+    (Consumer, Http-Client)
+    - Security
+    (Authentication, Authorization)
+    - JavaScript
+    (ES5, ES6, Truthy-Falsy, Equality-Loose, Datatypes, DOM, JSON, Prototypes, Scopes)
+    - Functions
+    (Arrow, Callback, Closure, IIFE)
+    - Ajax Fundamentals
+    (Fetch API, HTTP Verbs, XmlHttpRequest)
+    - Event Handlers
+    (Listeners, Propagation)
 
 # Week 06 Angular
 
