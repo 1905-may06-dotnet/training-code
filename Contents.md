@@ -147,32 +147,32 @@
 - Git [2.x]
 
 # Week 05 Web Services
-    - [Service Oriented Architecture](https://www.guru99.com/soa-principles.html)
+  - [Service Oriented Architecture](https://www.guru99.com/soa-principles.html)
     (Patterns, Principles, Endpoint, Address, Binding, Contract)
-    - [SOAP](https://www.tutorialspoint.com/soap/what_is_soap.htm)
+  - [SOAP](https://www.tutorialspoint.com/soap/what_is_soap.htm)
     (Envelope, Header, Body)
-    - [WCF](https://docs.microsoft.com/en-us/dotnet/framework/wcf/fundamental-concepts)
-    - [WSDL](https://www.tutorialspoint.com/wsdl/wsdl_introduction.htm)
+  - [WCF](https://docs.microsoft.com/en-us/dotnet/framework/wcf/fundamental-concepts)
+  - [WSDL](https://www.tutorialspoint.com/wsdl/wsdl_introduction.htm)
     (Port, Binding, PortType, Operation)
-    - [REST Fundamentals](https://restfulapi.net/rest-architectural-constraints/)
+  - [REST Fundamentals](https://restfulapi.net/rest-architectural-constraints/)
     (Uniform-Interface, Client-Server, Stateless, Cacheable, Layered, Code-On-Demand)
-    - [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+  - [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
     (Method, Safe, Idempotent, Status-Code, Header-Request, Header-Response)
-    - REST Server
+  - REST Server
     (CORS, XSS, CSRF)
-    - Media Type
+  - Media Type
     (JSON, Content-Negotiation, Action-Result Types, Formatter)
-    - REST Client
+  - REST Client
     (Consumer, Http-Client)
-    - Security
+  - Security
     (Authentication, Authorization)
-    - JavaScript
+  - JavaScript
     (ES5, ES6, Truthy-Falsy, Equality-Loose, Datatypes, DOM, JSON, Prototypes, Scopes)
-    - Functions
+  - Functions
     (Arrow, Callback, Closure, IIFE)
-    - Ajax Fundamentals
+  - Ajax Fundamentals
     (Fetch API, HTTP Verbs, XmlHttpRequest)
-    - Event Handlers
+  - Event Handlers
     (Listeners, Propagation)
 
 # Week 06 Angular
