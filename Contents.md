@@ -158,12 +158,12 @@
     (Uniform-Interface, Client-Server, Stateless, Cacheable, Layered, Code-On-Demand)
   - [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
     (Method, Safe, Idempotent, Status-Code, Header-Request, Header-Response)
-  - REST Server
+  - [REST Server](https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-2.2)
     (CORS, XSS, CSRF)
   - Media Type
-    (JSON, Content-Negotiation, Action-Result Types, Formatter)
+    (JSON, [Content-Negotiation](https://docs.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-2.2), [Action-Result Types](https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-2.2), [Formatter](https://docs.microsoft.com/en-us/aspnet/core/web-api/advanced/custom-formatters?view=aspnetcore-2.2))
   - REST Client
-    (Consumer, Http-Client)
+    (Consumer, [Http-Client](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient))
   - Security
     (Authentication, Authorization)
   - JavaScript
