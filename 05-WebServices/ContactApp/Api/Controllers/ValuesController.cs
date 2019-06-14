@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Api.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
-    [Route("contact/[controller]")]
-    [ApiController]
+    [Route("Api/[controller]")]
+    [ApiController]// helps Routing, Handle Errors, use different Http Status codes
     public class ValuesController : ControllerBase
     {
         static List<User> users = new List<User>() {
@@ -22,10 +23,16 @@ namespace Api.Controllers
         // GET api/values
         [HttpGet]
         [ProducesResponseType(typeof(User),StatusCodes.Status200OK)]
+        [Produces("application/xml")]// enforce the media type foermatter
+        //[Route("api/[Controller]/[action].{format?}")]
         //public ActionResult<IEnumerable<string>> Get()
+        //public ActionResult<IEnumerable<User>> Get()
+        [Authorize(Roles ="Sales")]
         public ActionResult<IEnumerable<User>> Get()
+        //public ActionResult Get()
         {
-            //return Ok(users);
+            //return Content("Hello World!!");
+            //return Ok(users)
             return users;
             //return new string[] { "value1", "value2" };
         }
@@ -34,7 +41,7 @@ namespace Api.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(User), StatusCodes.Status404NotFound)]
-        public ActionResult<User> Get(int id)
+        public ActionResult<User> Get([FromQuery]int id)
         {
             var user = users.Where<User>(i => i.Id == id).FirstOrDefault();
             if (user != null)
@@ -52,10 +59,9 @@ namespace Api.Controllers
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<User>> Post([FromBody] User user)
         {
-            //User user1 = new User() { Id = 6, firstName = "Cameron", lastName = "Coley", phone = "75458486" };
             users.Add(user);
-            // return Accepted();
-            return users;
+            return Accepted(users);
+            //return users;
 
         }
         // PUT api/values/5
