@@ -8,10 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 
 namespace todoapivstemplate.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ContactController : ControllerBase
@@ -25,10 +26,18 @@ namespace todoapivstemplate.Controllers
 
         // GET: api/Contact
         [HttpGet]
+        [EnableCors]// it will use default policy
+        //[EnableCors("Mypolicy")]
         public ActionResult<IEnumerable<Domain.ContactUser>> GetContactUser()
         {
             return  _contactRepository.GetContactUsers().ToList();
         }
+        [HttpGet("{id}")]
+        public ActionResult<Domain.ContactUser> GetById([FromRoute]int id)
+        {
+            return _contactRepository.GetContactUserById(id);
+        }
+
 
         // GET: api/Contact/5
         /*[HttpGet("{id}")]
