@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main Page</title>
-    
+    <link href="../CSS/index.css" rel="stylesheet">
 </head>
 <body>
     <!-- <h1 onclick="prompt('hello world');">Welcome</h1>     -->
     <h1 onclick="GetName();"> Welcome</h1>
+    <form>
+            <label for="t1">First name:</label>
+            <input id ="t1" type="text" placeholder="enter your firstname" autofocus ><span id="s1"></span></spa><br>
+            <label for="t2">Middle name:</label>
+            <input id ="t2" type="text" placeholder="enter your middle name"><br>
+            <label for="t3">Last name:</label>
+            <input id ="t3" type="text" placeholder="enter your last name"><br>
+            <input id="b1" type="submit">
+    </form>
     <!-- <script>
         function hello(){
             alert('Hi')
         }
     </script> -->
-    <script src="../JS/language.js"></script>
+    <!-- <script src="../JS/language.js"></script> -->
+    <!-- <script src="../JS/moreEs6.js"></script> -->
+    <script src="../JS/dom.js"></script>
+    <noscript>Script is not supported</noscript>
 </body>
 </html>
