@@ -1,11 +1,12 @@
-import {CardService} from './card-service'
+import {CardService} from './card-service';
 export class Main{
     constructor(){}
     static Main(){
         var newDeck=<HTMLButtonElement>document.getElementById("newDeck");
-        var drawCard=<HTMLButtonElement>document.querySelector("#drawCard");
+        var drawCard=<HTMLButtonElement>document.getElementById("drawCard");
         var container=<HTMLDivElement>document.getElementById("container");
         var deckId:string;
+
 
         let service=new CardService();
         newDeck.addEventListener("click",()=>{
@@ -18,7 +19,8 @@ export class Main{
             })
             .catch(console.log);
         });
-        drawCard.addEventListener("click",()=>{
+        
+        drawCard.onclick=()=>{
             service.drawDeck(deckId)
             .then(res=>{
                 let image=<HTMLImageElement>document.createElement('img');
@@ -27,7 +29,7 @@ export class Main{
                 console.log(res.cards[0].image);
             })
             .catch(console.log);
-        });
+        };
     }
 }
 Main.Main();
