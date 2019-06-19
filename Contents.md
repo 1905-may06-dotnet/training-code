@@ -176,5 +176,15 @@
     (Listeners, Propagation)
 
 # Week 06 Angular
+- [TypeScript Fundamentals](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+- [Angular](https://angular.io/docs)
+
+_Tools_
+- TypeScript [3.x]
+- Angular [6.x]
+- Jasmine [3.x]
+- Karma [2.x]
+- Webpack [4.x]
+
 
 # _Week 07 Microservices_** 
