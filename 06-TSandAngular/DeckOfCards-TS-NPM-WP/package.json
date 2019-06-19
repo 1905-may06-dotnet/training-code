@@ -1,0 +1,20 @@
+{
+  "name": "deckofcards-ts-npm-wp",
+  "version": "1.0.0",
+  "description": "This application consumes deckofcards api",
+  "main": "bundle.js",
+  "scripts": {
+    "start": "http-server dist/",
+    "build": "tsc && webpack && copy src\\index.html dist"
+  },
+  "author": "Pushpinder Kaur",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.2",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
+  }
+}
