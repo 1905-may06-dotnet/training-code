@@ -15,6 +15,10 @@ export class CardsApiService {
     return `https://deckofcardsapi.com/api/deck/${deckid}/draw/?count=${count}`;
   }
 
+  private getUrlShuffle(deckid: string): string {
+    return `https://cors.now.sh/https://deckofcardsapi.com/api/deck/${deckid}/shuffle`;
+  }
+
   createDeck() {
     return this.http.get<CreateDeckResponse>(this.urlNewDeck)
       .toPromise();
@@ -23,5 +27,10 @@ export class CardsApiService {
   drawDeck(deckid: string, count: number = 1) {
     return this.http.get<DrawCardResponse>(this.getUrlDrawDeck(deckid, count))
       .toPromise();
+  }
+
+  shuffleDeck(deckid: string) {
+    // if promise resolves to success, it will be shuffled
+    return this.http.get(this.getUrlShuffle(deckid)).toPromise();
   }
 }

@@ -18,4 +18,15 @@
   </li>
 </ul>
 
+<form>
+  <!-- two-way binding -->
+  <input type="text" name="value1" [(ngModel)]="data">
+  <input type="text" name="value2" [(ngModel)]="data">
+  <input type="text" name="value3" [(ngModel)]="data">
+</form>
+
+<app-cards [textFromInput]="title"></app-cards>
+
+<a routerLink="cards">Cards</a>
+
 <router-outlet></router-outlet>

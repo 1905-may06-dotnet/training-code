@@ -1,4 +1,6 @@
 Lets create a deck
-<button (click)="newDeck(drawButton, container)">New Deck</button>
+{{ textFromInput }}
+<button (click)="newDeck(drawButton, shuffleButton, container)">New Deck</button>
+<button disabled #shuffleButton (click)="shuffle()">Shuffle</button>
 <button disabled #drawButton (click)="drawCard(container)">Draw Card</button>
 <div #container></div>
