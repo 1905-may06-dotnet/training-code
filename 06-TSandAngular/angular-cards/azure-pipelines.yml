@@ -1,0 +1,10 @@
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - 06-TSandAngular/angular-cards
+
+steps:
+- script: echo build
