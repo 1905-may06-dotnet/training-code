@@ -1,15 +1,20 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { Component, Input } from '@angular/core';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
+
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        FormsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        CardsComponentStub
       ],
     }).compileComponents();
   }));
@@ -33,3 +38,9 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-cards!');
   });
 });
+
+@Component({selector: 'app-cards', template: ''})
+class CardsComponentStub {
+  @Input()
+  textFromInput: string;
+}
