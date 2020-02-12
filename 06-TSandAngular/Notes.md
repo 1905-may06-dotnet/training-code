@@ -13,6 +13,7 @@
 ## Demo
 - [About NPM quickstart](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)
 - [NPM Crash Course](https://www.youtube.com/watch?v=jHDhaSSKmB0)
+- [NPM crash course demo commands](https://gist.github.com/bradtraversy/09177818de0f43a6e74e2cd05d1fe596)
 
 - `npm init` -> gets a file `package.json` which maintains dependencies(local, dev, prod), scripts (commands to run), version, description about the package. Find the version from [npm registry](https://www.npmjs.com/) 
 - `npm install --save-dev typescript` in project folder -> create the node_modules and add typescript as a local dependency
