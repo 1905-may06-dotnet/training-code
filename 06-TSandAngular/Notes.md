@@ -11,12 +11,11 @@
 - what is [webpack](https://webpack.js.org/concepts/)
 
 ## Demo
-- https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/
+- [About NPM quickstart](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)
+- [NPM Crash Course](https://www.youtube.com/watch?v=jHDhaSSKmB0)
 
-- `npm init` -> get package.json```
-package.json
- version (npm registry npmjs.org) 
-- `npm install --save-dev typescript` in project folder -> create the node modules
+- `npm init` -> gets a file `package.json` which maintains dependencies(local, dev, prod), scripts (commands to run), version, description about the package. Find the version from [npm registry](https://www.npmjs.com/) 
+- `npm install --save-dev typescript` in project folder -> create the node_modules and add typescript as a local dependency
 - `npm install --save-dev webpack webpack-cli` -> to get node_modules folder for webpack dependencies
 - `npm install http-server`
 - https://webpack.js.org/guides/printable/#guides
