@@ -9,6 +9,7 @@
 
 ## [Typescript with NPM and Webpack](https://webpack.js.org/guides/typescript/#basic-setup)
 - what is [webpack](https://webpack.js.org/concepts/)
+- [Webpack quick crash course](https://www.youtube.com/watch?v=GU-2T7k9NfI)
 
 ## Demo
 - [About NPM quickstart](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)
@@ -20,7 +21,7 @@
 - `npm install --save-dev webpack webpack-cli` -> to get node_modules folder for webpack dependencies
 - `npm install http-server`
 - https://webpack.js.org/guides/printable/#guides
-- semantics versioning semver versioning for `<major>.<minor>.<patch>`
+- semantics versioning/semver -  `<major>.<minor>.<patch>`
 - `tsc --init` -> to generate tsconfig
     ```
        "target": "es6",
@@ -36,9 +37,13 @@
 - create a `src` folder and add all .ts files and .htmls as well
 - run `npx webpack`- which will take our script at `src/index.js` as the entry point, and will generate `dist/main.js` as the output. 
 -  In package.json add scripts:
-  "start": "http-server dist/",
-  "build": "tsc && webpack && copy src\\index.html dist",
+    ```
+        "scripts": {
+          "start": "http-server dist/",
+          "build": "tsc && webpack && copy src/index.html dist"
+          },
+    ```
 - `npm run build`- to build web pack
 - `npm start`- to run http-server
-- `package.json`->developers dependency but not version dependency
+- `package.json`-> has developers dependency but not version dependency
 - `package.lock-json`->exact version which is required
